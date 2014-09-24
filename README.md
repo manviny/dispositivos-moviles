@@ -1,7 +1,9 @@
 dispositivos-moviles
 ====================
 
+#SIZES
 
+##lg
 ```html
 <div class="container">
 	<div class="row">
@@ -11,6 +13,7 @@ dispositivos-moviles
 </div>
 ```
 
+##md
 ```html
 <div class="container">
 	<div class="row">
@@ -22,3 +25,26 @@ dispositivos-moviles
 </div>
 ```
 
+##sm
+```html
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3"><div class="well">columna 1</div></div>
+		<div class="col-sm-3"><div class="well">columna 2</div></div>
+		<div class="col-sm-3"><div class="well">columna 3</div></div>
+		<div class="col-sm-3"><div class="well">columna 4</div></div>
+	</div>
+</div>
+```
+
+##xs
+```html
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3"><div class="well">columna 1</div></div>
+		<div class="col-xs-3"><div class="well">columna 2</div></div>
+		<div class="col-xs-3"><div class="well">columna 3</div></div>
+		<div class="col-xs-3"><div class="well">columna 4</div></div>
+	</div>
+</div>
+```
