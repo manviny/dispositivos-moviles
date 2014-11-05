@@ -1,7 +1,41 @@
 dispositivos-moviles
 ====================
 
-#SIZES
+
+##index.html
+```html
+...
+<script src="js/app.js"></script>     
+...
+```
+##app.js
+```javascript
+  var app = angular.module('myApp', ['onsen']);
+
+  app.controller('Page1Ctrl', function($scope) {
+       $scope.mivariable = "Hola desde Angular"
+   });
+ 
+  app.controller('Page2Ctrl', function($scope) {
+       $scope.mivariable = "Hola desde Angular otra vez"
+   });  
+```
+##page1.html
+```html
+<div ng-controller="Page1Ctrl">
+    <h3>{{mivariable}}</h3>
+</div>   
+```
+##page2.html
+```html
+<div ng-controller="Page2Ctrl">
+    <h3>{{mivariable}}</h3>
+</div>   
+```
+
+
+
+#SIZES BOOTSTRAP
 
 ##lg
 ```html
