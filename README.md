@@ -13,6 +13,34 @@ npm install --global yo bower grunt-cli
 npm install --global generator-angular@0.9.8
 ```
 
+##Utilizar entorno de programación Bitnami MEAN
+##Create Cordova project with angularjs and onsenui
+```bash
+$ # 1.- install angular project
+$ mkdir valencia24 && cd $_
+$ yo angular Valencia24
+$ grunt serve               # it will populate index.html with the needed js and css files
+$ # fix grunt.js 
+$ # line 166      cwd:  '<%= yeoman.app %>'  ==>   cwd: ''      # so it will find bower.json
+$ grunt serve               # it should work 
+
+
+$ # 2.- if you want OnsenUI framework to be installed
+$ bower install onsenui --save
+$ grunt serve
+$ # fix bower_components/onsenui/bower.json  to load css files to our index.html
+$ # inject 'onsenui' to app.js
+
+$ # 3.- Create a cordova project
+$ cordova create valencia24 com.patrimonio24.valencia24 "Valencia24"
+$ # mode all folders to the root ../
+$ # Add platform
+$ cordova platform add android
+$ # Add plugin
+$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+```
+
+
 
 dispositivos-moviles
 ====================
