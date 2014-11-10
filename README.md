@@ -28,6 +28,7 @@ $ # ahora podemos encontrar nuestro codigo en C:\Bitnami\meanstack-2.6.5-0\miapp
 
 $ # 2.- if you want OnsenUI framework to be installed
 $ bower install onsenui --save
+# si nos da varias opciones seleccionar la última versión
 ```
 ##### cambiar en C:\Bitnami\meanstack-2.6.5-0\miapp\bower_components/onsenui/bower.json
 esto:
