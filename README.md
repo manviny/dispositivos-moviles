@@ -1,10 +1,10 @@
 ##Preparar entorno de programación
 Descargar e instalar [Bitnami MEAN](https://bitnami.com/stack/mean)  
 Este es un entorno de desarrollo con MongoDB, Express, Angular, Node.js (MEAN), que además incluye
- MongoDB, Git, PHP y RockMongo.
+ MongoDB, Git, PHP y RockMongo.   
 
+### instalar yo bower y grunt [YEOMAN](http://yeoman.io/codelab/setup.html)
 ```bash
-# instalar yo bower y grunt [YEOMAN](http://yeoman.io/codelab/setup.html)
 npm install --global yo bower grunt-cli
 #Abrir consola de bitnami e instalar el generador de angular
 npm install --global generator-angular@0.9.8
