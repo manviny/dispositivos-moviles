@@ -1,5 +1,7 @@
 ##Preparar entorno de programación
-Descargar e instalar [Bitnami MEAN](https://bitnami.com/stack/mean)
+Descargar e instalar [Bitnami MEAN](https://bitnami.com/stack/mean)  
+Este es un entorno de desarrollo con MongoDB, Express, Angular, Node.js (MEAN), que además incluye
+ MongoDB, Git, PHP y RockMongo.
 
 ```bash
 # instalar yo bower y grunt
