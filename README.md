@@ -30,6 +30,13 @@ $ # 2.- if you want OnsenUI framework to be installed
 $ bower install onsenui --save
 ```
 ##### cambiar en C:\Bitnami\meanstack-2.6.5-0\miapp\bower_components/onsenui/bower.json
+esto:
+```json
+  "main": [
+    "build/js/onsenui.js"
+  ],
+```
+por esto:
 ```json
   "main": [
     "build/js/onsenui.js",
@@ -38,14 +45,10 @@ $ bower install onsenui --save
   ],
 ```
 
-$ # 3.- Create a cordova project
-$ cordova create valencia24 com.patrimonio24.valencia24 "Valencia24"
-$ # mode all folders to the root ../
-$ # Add platform
-$ cordova platform add android
-$ # Add plugin
-$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+```bash
+$ grunt serve              
 ```
+
 
 
 
