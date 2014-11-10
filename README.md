@@ -4,7 +4,7 @@ Este es un entorno de desarrollo con MongoDB, Express, Angular, Node.js (MEAN), 
  MongoDB, Git, PHP y RockMongo.
 
 ```bash
-# instalar yo bower y grunt
+# instalar yo bower y grunt [YEOMAN](http://yeoman.io/codelab/setup.html)
 npm install --global yo bower grunt-cli
 #Abrir consola de bitnami e instalar el generador de angular
 npm install --global generator-angular@0.9.8
