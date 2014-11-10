@@ -45,7 +45,7 @@ por esto:
     "build/css/onsen-css-components.css"
   ],
 ```
-##### cambiar en app.js
+##### cambiar en scripts/app.js
 esto:
 ```javascript
 angular
