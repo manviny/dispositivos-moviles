@@ -44,11 +44,56 @@ por esto:
     "build/css/onsen-css-components.css"
   ],
 ```
+##### cambiar en app.js
+esto:
+```javascript
+angular
+  .module('miappApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
+  ])
+```
+por esto:
+```javascript
+angular
+  .module('miappApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'onsen'
+  ])
+```
+
+#####  en index.html dejar las lineas entre body y google analytics así:
+
+```html
+  <body ng-app="miappApp">
+
+      <div ng-view=""></div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+```
+#####  en main.html poner estas lineas:
+
+```html
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Title</div>
+  </ons-toolbar>
+</ons-page>
+```
 
 ```bash
 $ grunt serve              
 ```
-
 
 
 
