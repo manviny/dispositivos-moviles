@@ -1,3 +1,15 @@
+##Preparar entorno de programación
+Descargar e instalar [Bitnami MEAN](https://bitnami.com/stack/mean)
+
+```bash
+# instalar yo bower y grunt
+npm install --global yo bower grunt-cli
+#Abrir consola de bitnami e instalar el generador de angular
+npm install --global generator-angular@0.9.8
+```
+
+
+
 dispositivos-moviles
 ====================
 
