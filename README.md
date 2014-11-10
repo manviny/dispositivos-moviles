@@ -18,22 +18,25 @@ npm install --global generator-angular@0.9.8
 
 ## B) Utilizar entorno de programación Bitnami MEAN
   
-##Crear un proyecto Cordova con angularjs y onsenui
+####Crear un proyecto Cordova con angularjs y onsenui
 ```bash
-$ # 1.- instalar proyecto angualr
+$ # 1.- instalar proyecto angular
 $ mkdir miapp && cd miapp
-$ yo angular miapp (contestar Sass NO, Bootstrap NO, ENTER)
-$ grunt serve               # arranca nuestra nueva app y se previsualiza en htt://localhost:9000
-$ # fix grunt.js 
-$ # line 166      cwd:  '<%= yeoman.app %>'  ==>   cwd: ''      # so it will find bower.json
-$ grunt serve               # it should work 
-
+$ yo angular miapp          #(contestar Sass NO, Bootstrap NO, ENTER)
+$ grunt serve               # arranca nuestra nueva app y se previsualiza en http://localhost:9000
+$ # ahora podemos encontrar nuestro codigo en C:\Bitnami\meanstack-2.6.5-0\miapp
 
 $ # 2.- if you want OnsenUI framework to be installed
 $ bower install onsenui --save
-$ grunt serve
-$ # fix bower_components/onsenui/bower.json  to load css files to our index.html
-$ # inject 'onsenui' to app.js
+```
+##### cambiar en C:\Bitnami\meanstack-2.6.5-0\miapp\bower_components/onsenui/bower.json
+```json
+  "main": [
+    "build/js/onsenui.js",
+    "build/css/onsenui.css",
+    "build/css/onsen-css-components.css"
+  ],
+```
 
 $ # 3.- Create a cordova project
 $ cordova create valencia24 com.patrimonio24.valencia24 "Valencia24"
