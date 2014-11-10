@@ -1,25 +1,29 @@
-##Preparar entorno de programación
+## A) Preparar entorno de programación
 Descargar e instalar [Bitnami MEAN](https://bitnami.com/stack/mean)  
 Este es un entorno de desarrollo con MongoDB, Express, Angular, Node.js (MEAN), que además incluye
  MongoDB, Git, PHP y RockMongo.   
 
-#### instalar yo bower y grunt [YEOMAN](http://yeoman.io/codelab/setup.html)
-Inicio -> Bitnami MEAN stack -> Use Bitnami MEAN stack
+#### 1.- instalar yo bower y grunt [YEOMAN](http://yeoman.io/codelab/setup.html)
+Inicio -> Bitnami MEAN stack -> meanstack manager tool  (arranca el servidor)  
+Inicio -> Bitnami MEAN stack -> Use Bitnami MEAN stack  (terminal de trabajo)
+
 ```bash
 npm install --global yo bower grunt-cli
 ```
-####Abrir consola de bitnami e instalar el [generador de angular](https://github.com/yeoman/generator-angular)
+#### 2.- Abrir consola de bitnami e instalar el [generador de angular](https://github.com/yeoman/generator-angular)
 ```bash
 npm install --global generator-angular@0.9.8
 ```
 
-##Utilizar entorno de programación Bitnami MEAN
-##Create Cordova project with angularjs and onsenui
+
+## B) Utilizar entorno de programación Bitnami MEAN
+  
+##Crear un proyecto Cordova con angularjs y onsenui
 ```bash
-$ # 1.- install angular project
-$ mkdir valencia24 && cd $_
-$ yo angular Valencia24
-$ grunt serve               # it will populate index.html with the needed js and css files
+$ # 1.- instalar proyecto angualr
+$ mkdir miapp && cd miapp
+$ yo angular miapp (contestar Sass NO, Bootstrap NO, ENTER)
+$ grunt serve               # arranca nuestra nueva app y se previsualiza en htt://localhost:9000
 $ # fix grunt.js 
 $ # line 166      cwd:  '<%= yeoman.app %>'  ==>   cwd: ''      # so it will find bower.json
 $ grunt serve               # it should work 
