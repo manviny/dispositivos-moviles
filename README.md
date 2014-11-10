@@ -45,7 +45,7 @@ por esto:
     "build/css/onsen-css-components.css"
   ],
 ```
-##### cambiar en scripts/app.js
+##### cambiar en app/scripts/app.js
 esto:
 ```javascript
 angular
@@ -72,7 +72,7 @@ angular
   ])
 ```
 
-#####  en index.html dejar las lineas entre body y google analytics así:
+#####  en app/index.html dejar las lineas entre body y google analytics así:
 
 ```html
   <body ng-app="miappApp">
@@ -82,7 +82,7 @@ angular
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
 ```
-#####  en main.html poner estas lineas:
+#####  en app/views/main.html poner estas lineas:
 
 ```html
 <ons-page>
