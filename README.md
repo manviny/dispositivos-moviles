@@ -1,7 +1,7 @@
 dispositivos-moviles
 ====================
 
-## A) Preparar entorno de programación
+## A) Preparar entorno de programación para APPs
 Descargar e instalar [Bitnami MEAN](https://bitnami.com/stack/mean)  
 Este es un entorno de desarrollo con MongoDB, Express, Angular, Node.js (MEAN), que además incluye
  MongoDB, Git, PHP y RockMongo.   
@@ -19,7 +19,7 @@ npm install --global generator-angular@0.9.8
 ```
 
 
-## B) Utilizar entorno de programación Bitnami MEAN
+## B) Instalar onsenui en el entorno de programación Bitnami MEAN
   
 ####Crear un proyecto Cordova con angularjs y onsenui
 ```bash
