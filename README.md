@@ -45,7 +45,8 @@ por esto:
     "build/css/onsen-css-components.css"
   ],
 ```
-##### cambiar en app/scripts/app.js
+
+##### añadimos onsen en app/scripts/app.js para poder usar onsen
 esto:
 ```javascript
 angular
@@ -72,6 +73,7 @@ angular
   ])
 ```
 
+## C) Vamos a preparar una app con navegación mediante tabs
 #####  en app/index.html dejar las lineas entre body y google analytics así:
 
 ```html
@@ -103,8 +105,14 @@ angular
     <!-- build:js(.) scripts/oldieshim.js -->
     [NO COPIAR ESTA LINEA AQUI VA EL RESTO DEL CÓDIGO]
 ```
-#####  en app/views/main.html poner estas lineas:
 
+#####  creamos app/navigator.html y ponemos estas lineas:
+```html
+<ons-navigator title="Navigator" var="myNavigator" page="views/main.html">
+</ons-navigator> 
+```
+
+#####  en app/views/main.html poner estas lineas:
 ```html
 <ons-page>
   <ons-toolbar>
