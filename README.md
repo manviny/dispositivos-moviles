@@ -77,10 +77,31 @@ angular
 ```html
   <body ng-app="miappApp">
 
-      <div ng-view=""></div>
+      <ons-tabbar var="tabbar">
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
+        <ons-tabbar-item
+          active="true"
+          label="Home"
+          icon="home"
+          page="navigator.html">
+        </ons-tabbar-item>
+
+        <ons-tabbar-item
+          label="Settings"
+          icon="gear"
+          page="views/about.html">
+        </ons-tabbar-item>
+
+        <ons-tabbar-item
+          label="Mapa"
+          icon="gear"
+          page="views/localiza.html">
+        </ons-tabbar-item>
+        
+      </ons-tabbar>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    [NO COPIAR ESTA LINEA AQUI VA EL RESTO DEL CÓDIGO]
 ```
 #####  en app/views/main.html poner estas lineas:
 
