@@ -7,7 +7,6 @@ Este es un entorno de desarrollo con MongoDB, Express, Angular, Node.js (MEAN), 
  MongoDB, Git, PHP y RockMongo.   
 
 #### 1.- instalar yo bower y grunt [YEOMAN](http://yeoman.io/codelab/setup.html)
-Inicio -> Bitnami MEAN stack -> meanstack manager tool  (arranca el servidor)  
 Inicio -> Bitnami MEAN stack -> Use Bitnami MEAN stack  (terminal de trabajo)
 
 ```bash
