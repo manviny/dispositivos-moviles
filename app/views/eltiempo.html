@@ -1,0 +1,32 @@
+<ons-page>
+
+  <ons-toolbar>
+    <div class="center">El tiempo</div>
+  </ons-toolbar>
+
+  <div ng-controller="EltiempoCtrl" ng-init="buscaEltiempo('Mislata')">
+
+	<ons-row>
+	  <ons-col>Temperatura: {{miCiudad.list[0].main.temp}}</ons-col>
+	</ons-row>
+  
+
+	<ons-row>
+	  <ons-col>Presión: {{miCiudad.list[0].main.pressure}}</ons-col>
+	</ons-row>
+  
+
+	<ons-row>
+	  <ons-col>Humedad: {{miCiudad.list[0].main.humidity}}</ons-col>
+	</ons-row>
+
+	<ons-row>
+	  <ons-col><input placeholder="ciudad" id="ciudad" class="text-input" ng-model="ciudad"></ons-col>
+	</ons-row>
+	  <ons-button ng-click="buscaEltiempo(ciudad)">buscar</ons-button>
+ 
+  </div>
+
+</ons-page>
+
+

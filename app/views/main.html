@@ -1,0 +1,65 @@
+
+<style>
+
+
+@charset "UTF-8";
+/* CSS Document */
+#home {
+  background: url(images/clouds.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  height:100%;
+}
+#intro {
+  padding: 80px 40px 40px;
+}
+.title {
+  float: left;
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 0.9em;
+  text-shadow: 0.05em 0.05em 0.14em black;
+}
+.caption a{color: #fff};
+.sub {
+  line-height: 0.9em;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+.logo {
+  float: left;
+}
+.clearfix{
+  clear: both;
+}
+.dark-tab-bar a {width: 50%;}
+.dark-tab-bar {position: fixed; bottom: 0;}
+.light {
+  color: #000;
+  background: #DFE2E2;
+  padding: 1px 20px 20px;
+}
+li a {
+  text-decoration: none;
+  color: rgb(69, 69, 69);
+}
+</style>   
+
+<ons-page ng-controller="MainCtrl">
+ 
+     
+  <div  id="home">
+    <div id="intro">
+        <!-- <img src="images/logo.png" width="75" height="75" class="logo"> -->
+        <h1 class="title">El Tiempo</h1>
+        <p class="sub clearfix">... allá donde estés</p>
+        <br>
+        <ons-button ng-click="myNavigator.pushPage('views/portada.html');">Guía</ons-button>
+        <ons-button ng-click="myNavigator.pushPage('views/portada.html');">ayuda</ons-button>
+    </div>
+  </div>
+
+
+</ons-page>
