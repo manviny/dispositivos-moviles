@@ -8,7 +8,7 @@
 [6.-Presentar un mapa en nuestra app](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#6-presentar-un-mapa-en-nuestra-app) 
 
 ### 1.- Prepara entorno para usar angularjs  
-**Borrar index.html y pegar este código**
+**Borrar contenido de index.html y pegar este código**
 ```html
 <!DOCTYPE HTML>
 <html ng-app="myApp">
@@ -18,8 +18,6 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
-    
-     <script> angular.module('myApp', ['onsen']);</script>
      
      <script src="js/app.js"></script>
      
