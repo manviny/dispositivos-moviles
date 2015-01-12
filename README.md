@@ -154,7 +154,7 @@ En el paso 1 hemos creado una variable, esta debe estar precedida por el conecto
 [volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
 
 ###4.- Comunicar con una api de terceros mediante $http 
-
+Previsualizar en el móvil porqué es posible que chrome no nos muestre datos, debido a la configuración CORS.
 Para que nuestra app sea dinámica debemos consumir datos de fuentes externa en este caso lo haremos desde el servicio [openwheatermap](http://openweathermap.org/) que nos devuelve datos del tiempo de una o varias localidades en formato JSON.  
 
 En nuestro caso vamos a pedirle datos de Valencia, para ello debemos hacer la siguiente llamada, *http://api.openweathermap.org/data/2.5/weather?q=Valencia,es&units=metric&lang=sp*. Si pusieramos esta linea en la url de nuestro navegador, veremos que nos devuelve datos en formato json
