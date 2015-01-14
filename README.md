@@ -1,7 +1,13 @@
 [MONACA](https://monaca.io/)
 ===========================
 Antes de empezar debemos crear una cuenta en monaca pinchando en el enlace superior y crear un nuevo proyecto tipo "Onsen UI Tabbar"  
-   
+Para poder realizar apps es aconsejable tener unos conocimientos básicos de:  
+* HTML
+* [onsenui](http://onsen.io/)
+* javascript
+* angularjs
+* json
+  
 [1.- Prepara entorno para usar angularjs](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#1--prepara-entorno-para-usar-angularjs)  
 [2.- Crear portada con imagen de fondo.](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#2--crear-portada-con-imagen-de-fondo)   
 [3.- Conectar datos entre javascript y html.](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#3--conectar-datos-entre-javascript-y-html)   
@@ -49,6 +55,7 @@ Antes de empezar debemos crear una cuenta en monaca pinchando en el enlace super
 ----css  
 ----js  
 ```js
+// con la linea siguiente habilitamos angularjs y onsenui  
 var app = angular.module('myApp', ['onsen']);
 ```
 [volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
