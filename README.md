@@ -271,6 +271,14 @@ En app.js la linea del módulo debe quedar de la siguiente forma:
 ```javascript
  angular.module('myApp', ['onsen','leaflet-directive']);
 ```
+**PASO 3.** Un peuqeño truco para que el mapa ocupe toda la pantalla.  
+Debemos añadir a nuestra hoja de estilos style.css lo siguiente
+```css
+/*lefalet map*/
+.angular-leaflet-map { height: 100%;}
+```
+**PASO 4.** Crear nuestra página y nuestro controlador
+
 
 crear la vista el controlador y corregir css para que el mapa ocupe el 100% de la pantalla
 
