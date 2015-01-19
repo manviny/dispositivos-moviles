@@ -255,18 +255,23 @@ y como en los otros casos, en index.html debemos apuntar a gps.html, para poder 
 
 [volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
 ###6.-Presentar un mapa en nuestra app
-El primer paso para poder presentar un mapa en nuestra app es instalar el javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):
+**PASO 1.** Añadir las librerías necesarias   
+El primer paso para poder presentar un mapa en nuestra app es instalar el css y javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):
 
 ```javascript
     <link rel="stylesheet" href="styles/leaflet.css" />
     <script src="js/leaflet.js"></script>
     <script src="js/angular-leaflet-directive.min.js"></script> 
 ```
-añadir:  
-* leaflet.css  
-* leaflet.js  
-* angular-leaflet-directive.min.js  
-* 'leaflet-directive' al módulo  
+Los mapas están compuestos de pequeñas imagenes a modo de azulejos que se unen para formar un mapa que ocupe la pantalla completa, de esto se encarga **leaflet.css** y **leaflet.js** y para poder facilitar su uso mediante angularjs, cargamos **angular-leaflet-directive.min.js**, que nos falicitará la escritura del código para visualizar el mapa y añadirle marcadores
+**leaflet.css**, 
+
+**PASO 2.** Inyectar la directiva a nuestra app.   
+En app.js la linea del módulo debe quedar de la siguiente forma:
+```javascript
+ angular.module('myApp', ['onsen','leaflet-directive']);
+```
+
 crear la vista el controlador y corregir css para que el mapa ocupe el 100% de la pantalla
 
 ###Poner un marcador en un mapa
