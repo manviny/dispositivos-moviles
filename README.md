@@ -263,21 +263,20 @@ El primer paso para poder presentar un mapa en nuestra app es instalar el css y 
     <script src="js/leaflet.js"></script>
     <script src="js/angular-leaflet-directive.min.js"></script> 
 ```
-Los mapas están compuestos de pequeñas imagenes a modo de azulejos que se unen para formar un mapa que ocupe la pantalla completa, de esto se encarga **leaflet.css** y **leaflet.js** y para poder facilitar su uso mediante angularjs, cargamos **angular-leaflet-directive.min.js**, que nos falicitará la escritura del código para visualizar el mapa y añadirle marcadores
-**leaflet.css**, 
+Los mapas están compuestos de pequeñas imagenes a modo de azulejos que se unen para formar un mapa que ocupe la pantalla completa, de esto se encarga **leaflet.css** y **leaflet.js** y para poder facilitar su uso mediante angularjs, cargamos **angular-leaflet-directive.min.js**, que nos falicitará la escritura del código para visualizar el mapa y añadirle marcadores  
 
 **PASO 2.** Inyectar la directiva a nuestra app.   
 En app.js la linea del módulo debe quedar de la siguiente forma:
 ```javascript
  angular.module('myApp', ['onsen','leaflet-directive']);
 ```
-**PASO 3.** Un peuqeño truco para que el mapa ocupe toda la pantalla.  
+**PASO 3.** Un pequeño truco para que el mapa ocupe toda la pantalla.  
 Debemos añadir a nuestra hoja de estilos style.css lo siguiente
 ```css
 /*lefalet map*/
 .angular-leaflet-map { height: 100%;}
 ```
-**PASO 4.** Crear nuestra página y nuestro controlador
+**PASO 4.** Crear nuestra página, controlador y crear enlace en index.html
 
 
 crear la vista el controlador y corregir css para que el mapa ocupe el 100% de la pantalla
