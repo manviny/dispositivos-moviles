@@ -265,4 +265,11 @@ crear la vista el controlador y corregir css para que el mapa ocupe el 100% de l
 ###Poner un marcador en un mapa
 ###Empaquetar la app para instalarla en un móvil
 ###[xml to json](http://davidwalsh.name/convert-xml-json)
-[listado apis](https://www.mashape.com/)
+[listado apis](https://www.mashape.com/)   
+Para llamar una API con key se debe poner la cabecera:  
+```javascript
+$http.get('www.google.com/someapi', {
+    headers: {'Authorization': 'Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=='}
+});
+```
+
