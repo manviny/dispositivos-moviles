@@ -277,8 +277,30 @@ Debemos añadir a nuestra hoja de estilos style.css lo siguiente
 .angular-leaflet-map { height: 100%;}
 ```
 **PASO 4.** Crear nuestra página, controlador y crear enlace en index.html
-
-
+**app.js**  
+```javascript
+    app.controller('MapaCtrl', function($scope) {
+        
+        angular.extend($scope, {
+            center: {
+                lat: 40.095,
+                lng: -3.823,
+                zoom: 4
+            },
+            defaults: {
+                scrollWheelZoom: false
+            }
+        });
+       
+    }); 
+```
+**mapa.html**
+```html
+<ons-page class="center" ng-controller="MapaCtrl">
+   <leaflet></leaflet>
+</ons-page>
+```
+En **index.html** hacer un enlace al igual que hicimos con el resto de pantallas.  
 
 ###Poner un marcador en un mapa
 ###Empaquetar la app para instalarla en un móvil
