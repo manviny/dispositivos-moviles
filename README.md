@@ -259,7 +259,7 @@ y como en los otros casos, en index.html debemos apuntar a gps.html, para poder 
 El primer paso para poder presentar un mapa en nuestra app es instalar el css y javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):
 
 ```javascript
-    <link rel="stylesheet" href="styles/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
     <script src="js/leaflet.js"></script>
     <script src="js/angular-leaflet-directive.min.js"></script> 
 ```
@@ -279,7 +279,6 @@ Debemos añadir a nuestra hoja de estilos style.css lo siguiente
 **PASO 4.** Crear nuestra página, controlador y crear enlace en index.html
 
 
-crear la vista el controlador y corregir css para que el mapa ocupe el 100% de la pantalla
 
 ###Poner un marcador en un mapa
 ###Empaquetar la app para instalarla en un móvil
