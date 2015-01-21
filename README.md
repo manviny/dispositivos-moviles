@@ -256,8 +256,9 @@ y como en los otros casos, en index.html debemos apuntar a gps.html, para poder 
 [volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
 ###6.-Presentar un mapa en nuestra app
 **PASO 1.** Añadir las librerías necesarias   
-El primer paso para poder presentar un mapa en nuestra app es instalar el css y javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):
+El primer paso para poder presentar un mapa en nuestra app es instalar el css y javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):   
 
+**index.html**
 ```javascript
     <link rel="stylesheet" href="css/leaflet.css" />
     <script src="js/leaflet.js"></script>
