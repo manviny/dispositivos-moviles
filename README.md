@@ -290,13 +290,10 @@ Debemos añadir a nuestra hoja de estilos style.css lo siguiente
     app.controller('MapaCtrl', function($scope) {
         
         angular.extend($scope, {
-            center: {
-                lat: 40.095,
-                lng: -3.823,
-                zoom: 4
-            },
-            defaults: {
-                scrollWheelZoom: false
+            center: {lat: 39.469935,lng: -0.376287 ,zoom: 16}, 
+            defaults: {    
+                tileLayerOptions: {opacity: 0.9, detectRetina: true, reuseTiles: true,}, maxZoom:18, scrollWheelZoom: false},
+                layers: { baselayers: {valencia: { name: 'OpenStreetMap',url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',type: 'xyz'}, } 
             }
         });
        
@@ -305,7 +302,7 @@ Debemos añadir a nuestra hoja de estilos style.css lo siguiente
 **mapa.html**
 ```html
 <ons-page class="center" ng-controller="MapaCtrl">
-   <leaflet></leaflet>
+    <leaflet center="center" layers="layers" defaults="defaults" ></leaflet>
 </ons-page>
 ```
 En **index.html** hacer un enlace al igual que hicimos con el resto de pantallas.  
