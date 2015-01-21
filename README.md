@@ -264,7 +264,13 @@ El primer paso para poder presentar un mapa en nuestra app es instalar el css y 
     <script src="js/leaflet.js"></script>
     <script src="js/angular-leaflet-directive.min.js"></script> 
 ```
-Los mapas están compuestos de pequeñas imagenes a modo de azulejos que se unen para formar un mapa que ocupe la pantalla completa, de esto se encarga **leaflet.css** y **leaflet.js** y para poder facilitar su uso mediante angularjs, cargamos [**angular-leaflet-directive.min.js**](http://tombatossals.github.io/angular-leaflet-directive/#!), que nos falicitará la escritura del código para visualizar el mapa y añadirle marcadores  
+Los mapas están compuestos de pequeñas imagenes a modo de azulejos que se unen para formar un mapa que ocupe la pantalla completa, de esto se encarga **leaflet.css** y **leaflet.js** y para poder facilitar su uso mediante angularjs, cargamos [**angular-leaflet-directive.min.js**](http://tombatossals.github.io/angular-leaflet-directive/#!), que nos falicitará la escritura del código para visualizar el mapa y añadirle marcadores.  
+Los ficheros se encuentran arriba en el repositorio y debemos copiarlos en:
+/css/leaflet.css  
+/js/leaflet.js  
+/js/angular-leaflet-directive.min.js  
+
+
 
 **PASO 2.** Inyectar la directiva a nuestra app.   
 En app.js la linea del módulo debe quedar de la siguiente forma:
