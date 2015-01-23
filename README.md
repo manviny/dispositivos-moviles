@@ -55,7 +55,7 @@ Para poder realizar apps es aconsejable tener unos conocimientos básicos de:
 ----css  
 ----js  
 ```js
-// con la linea siguiente habilitamos angularjs y onsenui  
+// con la linea siguiente habilitamos angularjs y onsenui en el fichero /js/app.js 
 var app = angular.module('myApp', ['onsen']);
 ```
 [volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
