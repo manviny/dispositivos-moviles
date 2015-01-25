@@ -8,12 +8,12 @@ Para poder realizar apps es aconsejable tener unos conocimientos básicos de:
 * angularjs
 * json
   
-[1.- Prepara entorno para usar angularjs](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#1--prepara-entorno-para-usar-angularjs)  
-[2.- Crear portada con imagen de fondo.](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#2--crear-portada-con-imagen-de-fondo)   
-[3.- Conectar datos entre javascript y html.](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#3--conectar-datos-entre-javascript-y-html)   
-[4.- Comunicar con una api de terceros mediante $http](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#4--comunicar-con-una-api-de-terceros-mediante-http)   
-[5.- Acceder al hardware del terminal.](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#5--acceder-al-hardware-del-terminal)  
-[6.-Presentar un mapa en nuestra app](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#6-presentar-un-mapa-en-nuestra-app) 
+[1.- Prepara entorno para usar angularjs](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#1--prepara-entorno-para-usar-angularjs)  
+[2.- Crear portada con imagen de fondo.](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#2--crear-portada-con-imagen-de-fondo)   
+[3.- Conectar datos entre javascript y html.](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#3--conectar-datos-entre-javascript-y-html)   
+[4.- Comunicar con una api de terceros mediante $http](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#4--comunicar-con-una-api-de-terceros-mediante-http)   
+[5.- Acceder al hardware del terminal.](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#5--acceder-al-hardware-del-terminal)  
+[6.-Presentar un mapa en nuestra app](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#6-presentar-un-mapa-en-nuestra-app) 
 
 ### 1.- Prepara entorno para usar angularjs  
 **Borrar contenido de index.html y pegar este código**
@@ -58,7 +58,7 @@ Para poder realizar apps es aconsejable tener unos conocimientos básicos de:
 // con la linea siguiente habilitamos angularjs y onsenui en el fichero /js/app.js 
 var app = angular.module('myApp', ['onsen']);
 ```
-[volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
+[volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)   
 ###2.- Crear portada con imagen de fondo.  
 Añadir carpeta img y subir fondo que usaremos como fondo
 --www  
@@ -108,7 +108,7 @@ y en nuestro page1.html, esto:( renombrar la pagina page1.html por portada.html 
 
 </ons-page>
 ```
-[volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)
+[volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)
 
 
 ### 3.- Conectar datos entre javascript y html. 
@@ -160,7 +160,7 @@ En el paso 1 hemos creado una variable, esta debe estar precedida por el conecto
 
 
 **Muy importante** prestar especial atención en los dos ficheros a la palabra **ElTiempoCtrl**, pues és la que hace de conector entre ambos. 
-[volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
+[volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)   
 
 ###4.- Comunicar con una api de terceros mediante $http 
 Previsualizar en el móvil porqué es posible que chrome no nos muestre datos, debido a la configuración CORS.
@@ -193,7 +193,7 @@ Para extraer datos requeridos desde un objeto JSON, podemos ayudarnos de las sug
 [editor online](http://jsoneditoronline.org/)  
 [json](http://www.json.org/)  
 
-[volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
+[volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)   
 ###5.- Acceder al hardware del terminal.
 En este caso vamos a acceder al GPS de nuestro terminal móvil. Para ello debemos activar el plugin que nos permita acceder al GSP del teléfono:  
   
@@ -253,7 +253,7 @@ y como en los otros casos, en index.html debemos apuntar a gps.html, para poder 
 
 
 
-[volver](https://github.com/manviny/dispositivos-moviles/wiki/Proyecto-M%C3%B3naca#monaca)   
+[volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)   
 ###6.-Presentar un mapa en nuestra app
 **PASO 1.** Añadir las librerías necesarias   
 El primer paso para poder presentar un mapa en nuestra app es instalar el css y javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):   
