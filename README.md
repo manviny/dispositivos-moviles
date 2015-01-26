@@ -311,7 +311,7 @@ En **index.html** hacer un enlace al igual que hicimos con el resto de pantallas
 En nuestro controlador del mapa MapaCtrl añadir lo siguiente:   
 **app.js**
 ```javascript
-            center: {lat: 39.469935,lng: -0.376287 ,zoom: 16}, 
+            center: {autoDiscover: true ,zoom: 16},    // nos centra en nuestra posicion
             marcadores: {
                 osloMarker: {
                     lat: 39.469935,
