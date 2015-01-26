@@ -13,7 +13,7 @@ Para poder realizar apps es aconsejable tener unos conocimientos básicos de:
 [3.- Conectar datos entre javascript y html.](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#3--conectar-datos-entre-javascript-y-html)   
 [4.- Comunicar con una api de terceros mediante $http](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#4--comunicar-con-una-api-de-terceros-mediante-http)   
 [5.- Acceder al hardware del terminal.](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#5--acceder-al-hardware-del-terminal)  
-[6.-Presentar un mapa en nuestra app](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#6-presentar-un-mapa-en-nuestra-app) 
+[6.-Presentar un mapa en nuestra app](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#6-presentar-un-mapa-en-nuestra-app)    
 [7.- Poner un marcador en un mapa](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#7--poner-un-marcador-en-un-mapa)
 ### 1.- Prepara entorno para usar angularjs  
 **Borrar contenido de index.html y pegar este código**
