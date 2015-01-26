@@ -418,6 +418,8 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
 [volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)
 
 
+### 8.- Hacer clic en al mapa para saber ciudad y temperatura
+
 ###Empaquetar la app para instalarla en un móvil
 ###[xml to json](http://davidwalsh.name/convert-xml-json)
 [listado apis](https://www.mashape.com/)   
