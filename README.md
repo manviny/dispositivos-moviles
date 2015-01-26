@@ -14,7 +14,7 @@ Para poder realizar apps es aconsejable tener unos conocimientos básicos de:
 [4.- Comunicar con una api de terceros mediante $http](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#4--comunicar-con-una-api-de-terceros-mediante-http)   
 [5.- Acceder al hardware del terminal.](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#5--acceder-al-hardware-del-terminal)  
 [6.-Presentar un mapa en nuestra app](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#6-presentar-un-mapa-en-nuestra-app) 
-
+[7.- Poner un marcador en un mapa](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#7--poner-un-marcador-en-un-mapa)
 ### 1.- Prepara entorno para usar angularjs  
 **Borrar contenido de index.html y pegar este código**
 ```html
@@ -250,10 +250,9 @@ Añadir el siguiente controlador
 
 y como en los otros casos, en index.html debemos apuntar a gps.html, para poder visualizarlo.  
 
-
-
-
 [volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)   
+
+
 ###6.-Presentar un mapa en nuestra app
 **PASO 1.** Añadir las librerías necesarias   
 El primer paso para poder presentar un mapa en nuestra app es instalar el css y javascript necesario, agregamos los siguientes ficheros que podemos encontrar en internet (o bien en la parte superior de este documento):   
@@ -328,6 +327,8 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
 ```html
 <leaflet center="center" markers="marcadores" layers="layers" defaults="defaults" ></leaflet>
 ```
+[volver](https://github.com/manviny/dispositivos-moviles/blob/master/README.md#monaca)
+
 
 ###Empaquetar la app para instalarla en un móvil
 ###[xml to json](http://davidwalsh.name/convert-xml-json)
