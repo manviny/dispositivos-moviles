@@ -308,21 +308,51 @@ En **index.html** hacer un enlace al igual que hicimos con el resto de pantallas
 
 ### 7.- Poner un marcador en un mapa
 
-En nuestro controlador del mapa MapaCtrl añadir lo siguiente:   
+Cuando el ususario ponga en marcha la app buscaremos su posición y las guardaremos en una variable general accesible por todos los controladores para no tener que estar llamando al GPS cada vez que queramos saber nuestra posición.  
 **app.js**
 ```javascript
-            center: {autoDiscover: true ,zoom: 16},    // nos centra en nuestra posicion
-            marcadores: {
-                osloMarker: {
-                    lat: 39.469935,
-                    lng: -0.376287,
+ angular.module('myApp', ['onsen','leaflet-directive']);
+
+    var miPos = {};
+    
+    navigator.geolocation.getCurrentPosition(function(position) {
+        miPos.lat = position.coords.latitude; 
+        miPos.lng = position.coords.longitude; 
+    }, function(){ console.log("no se puede acceder al gps")});
+    
+    ...
+    
+    
+    app.controller('MapaCtrl', function($scope) {
+        $scope.marcadores = {};
+
+        
+        angular.extend($scope, {
+            center: {lat: miPos.lat,lng: miPos.lng ,zoom: 16}, 
+            marcadores: {},
+            defaults: {    
+                tileLayerOptions: {opacity: 0.9, detectRetina: true, reuseTiles: true,}, maxZoom:18, scrollWheelZoom: false},
+                layers: { baselayers: {valencia: { name: 'OpenStreetMap',url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',type: 'xyz'}, } 
+            }
+        });
+        $scope.marcadores =  {
+                miposicion: {
+                    lat: miPos.lat,
+                    lng: miPos.lng,
                     message: "Soy yo!",
                     focus: true,
                     draggable: false
                 }
-            },
-            defaults: { 
+        };      
+      
+      
+    }); 
+    
+    ....
+    
+    
 ```
+
 y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente forma  
 ```html
 <leaflet center="center" markers="marcadores" layers="layers" defaults="defaults" ></leaflet>
