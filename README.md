@@ -419,6 +419,44 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
 
 
 ### 8.- Hacer clic en al mapa para saber ciudad y temperatura
+**app.js** añadir:  
+```javascript
+    app.controller('MapaCtrl', function($scope) {
+        $scope.marcadores = {};
+
+        $scope.$on('leafletDirectiveMap.click', function(event, args){
+            alert(JSON.stringify(args.leafletEvent.latlng))
+        });
+       
+       
+        angular.extend($scope, {
+            center: {lat: miPos.lat,lng: miPos.lng ,zoom: 16}, 
+            marcadores: {},
+            defaults: {    
+                tileLayerOptions: {opacity: 0.9, detectRetina: true, reuseTiles: true,}, maxZoom:18, scrollWheelZoom: false},
+                layers: { baselayers: {valencia: { name: 'OpenStreetMap',url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',type: 'xyz'}, } 
+            },
+            events: {
+              map: {
+                enable: ['click', 'drag', 'blur', 'touchstart'],
+                logic: 'emit'
+              }
+            },  
+        });
+        $scope.marcadores =  {
+                miposicion: {
+                    lat: miPos.lat,
+                    lng: miPos.lng,
+                    message: "Soy yo!",
+                    focus: true,
+                    draggable: false
+                }
+        };  
+```
+**mapa.html**, sustituir:  
+```html
+ <leaflet center="center" markers="marcadores" layers="layers" defaults="defaults"  event-broadcast="events"></leaflet>
+ ```
 
 ###Empaquetar la app para instalarla en un móvil
 ###[xml to json](http://davidwalsh.name/convert-xml-json)
