@@ -307,7 +307,28 @@ Debemos añadir a nuestra hoja de estilos style.css lo siguiente
 ```
 En **index.html** hacer un enlace al igual que hicimos con el resto de pantallas.  
 
-###Poner un marcador en un mapa
+### 7.- Poner un marcador en un mapa
+
+En nuestro controlador del mapa MapaCtrl añadir lo siguiente:   
+**app.js**
+```javascript
+            center: {lat: 39.469935,lng: -0.376287 ,zoom: 16}, 
+            marcadores: {
+                osloMarker: {
+                    lat: 39.469935,
+                    lng: -0.376287,
+                    message: "Soy yo!",
+                    focus: true,
+                    draggable: false
+                }
+            },
+            defaults: { 
+```
+y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente forma  
+```html
+<leaflet center="center" markers="marcadores" layers="layers" defaults="defaults" ></leaflet>
+```
+
 ###Empaquetar la app para instalarla en un móvil
 ###[xml to json](http://davidwalsh.name/convert-xml-json)
 [listado apis](https://www.mashape.com/)   
