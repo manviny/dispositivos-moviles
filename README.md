@@ -308,22 +308,82 @@ En **index.html** hacer un enlace al igual que hicimos con el resto de pantallas
 
 ### 7.- Poner un marcador en un mapa
 
-Cuando el ususario ponga en marcha la app buscaremos su posición y las guardaremos en una variable general accesible por todos los controladores para no tener que estar llamando al GPS cada vez que queramos saber nuestra posición.  
+Cuando el ususario ponga en marcha la app buscaremos su posición y las guardaremos en una variable general accesible por todos los controladores para no tener que estar llamando al GPS cada vez que queramos saber nuestra posición. El código quedará de la siguiente forma:    
 **app.js**
 ```javascript
+// This is a JavaScript file
  angular.module('myApp', ['onsen','leaflet-directive']);
 
     var miPos = {};
-    
+
+
     navigator.geolocation.getCurrentPosition(function(position) {
         miPos.lat = position.coords.latitude; 
         miPos.lng = position.coords.longitude; 
     }, function(){ console.log("no se puede acceder al gps")});
+
+
+   /**
+     * El Tiempo Ctrl
+     */ 
+    app.controller('ElTiempoCtrl', function($scope, $http) {    
+        //$scope.mitemperatura ="Temperatura en Valencia: 25 ºC";
+        
+        $http.get('http://api.openweathermap.org/data/2.5/weather?q=Valencia,es&units=metric&lang=sp')
+        .success(function(data) {
+            $scope.localidad = data.name;
+            $scope.temperatura = data.main.temp;
+            $scope.mitemperatura = data.name + '  ' + data.main.temp + ' ºC';
+        })           
+        .error(function(data, status, headers, config) {
+            console.debug(data, status, headers, config);
+        });        
+        
+    }); 
+
+
+   /**
+     * GPS Ctrl
+     */ 
+    app.controller('GpsCtrl', function($scope) { 
+
+      var options = {enableHighAccuracy: true,timeout: 5000, maximumAge: 0};
+
+      var onSuccess = function(position) {
+         $scope.$apply(function(){
+             
+             $scope.latitude = position.coords.latitude; 
+             $scope.longitude = position.coords.longitude;
+             $scope.altitude = position.coords.altitude;
+             $scope.accuracy = position.coords.accuracy;
+             $scope.altitudeAccuracy = position.coords.altitudeAccuracy;
+             $scope.heading = position.coords.heading;
+             $scope.speed = position.coords.speed;
+             $scope.speed = position.coords.speed;
+             $scope.timestamp = position.coords.timestamp;              
+         })
+       };
+
+       // onError Callback receives a PositionError object
+       function onError(error) {
+           $scope.error = error.code + ' ' + error.message
+           console.log(error)
+       }
+
+        /**
+         * GPS alta precisión
+         */ 
+        //navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
     
-    ...
-    ...
-    ...
-    
+        /**
+         *  WIFI precisión depende de la conexión
+         */ 
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+   })    
+   
+   
+   
+   
     app.controller('MapaCtrl', function($scope) {
         $scope.marcadores = {};
 
@@ -347,12 +407,7 @@ Cuando el ususario ponga en marcha la app buscaremos su posición y las guardare
         };      
       
       
-    }); 
-    
-    ...
-    ...
-    ...
-    
+    });    
     
 ```
 
