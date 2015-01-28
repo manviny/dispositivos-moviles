@@ -419,8 +419,81 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
 
 
 ### 8.- Hacer clic en al mapa para saber ciudad y temperatura
-**app.js** añadir:  
+**app.js** debe quedar de la siguiente forma:  
 ```javascript
+  // This is a JavaScript file
+ angular.module('myApp', ['onsen','leaflet-directive']);
+
+    var miPos = {};
+
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        miPos.lat = position.coords.latitude; 
+        miPos.lng = position.coords.longitude; 
+    }, function(){ console.log("no se puede acceder al gps")});
+
+
+   /**
+     * El Tiempo Ctrl
+     */ 
+    app.controller('ElTiempoCtrl', function($scope, $http) {    
+        //$scope.mitemperatura ="Temperatura en Valencia: 25 ºC";
+        
+        $http.get('http://api.openweathermap.org/data/2.5/weather?q=Valencia,es&units=metric&lang=sp')
+        .success(function(data) {
+            $scope.localidad = data.name;
+            $scope.temperatura = data.main.temp;
+            $scope.mitemperatura = data.name + '  ' + data.main.temp + ' ºC';
+        })           
+        .error(function(data, status, headers, config) {
+            console.debug(data, status, headers, config);
+        });        
+        
+    }); 
+
+
+   /**
+     * GPS Ctrl
+     */ 
+    app.controller('GpsCtrl', function($scope) { 
+
+      var options = {enableHighAccuracy: true,timeout: 5000, maximumAge: 0};
+
+      var onSuccess = function(position) {
+         $scope.$apply(function(){
+             
+             $scope.latitude = position.coords.latitude; 
+             $scope.longitude = position.coords.longitude;
+             $scope.altitude = position.coords.altitude;
+             $scope.accuracy = position.coords.accuracy;
+             $scope.altitudeAccuracy = position.coords.altitudeAccuracy;
+             $scope.heading = position.coords.heading;
+             $scope.speed = position.coords.speed;
+             $scope.speed = position.coords.speed;
+             $scope.timestamp = position.coords.timestamp;              
+         })
+       };
+
+       // onError Callback receives a PositionError object
+       function onError(error) {
+           $scope.error = error.code + ' ' + error.message
+           console.log(error)
+       }
+
+        /**
+         * GPS alta precisión
+         */ 
+        //navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+    
+        /**
+         *  WIFI precisión depende de la conexión
+         */ 
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+   })    
+   
+   
+   
+   
     app.controller('MapaCtrl', function($scope) {
         $scope.marcadores = {};
 
@@ -430,7 +503,7 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
        
        
         angular.extend($scope, {
-            center: {lat: miPos.lat,lng: miPos.lng ,zoom: 16}, 
+            center: {autoDiscover:true ,zoom: 16}, 
             marcadores: {},
             defaults: {    
                 tileLayerOptions: {opacity: 0.9, detectRetina: true, reuseTiles: true,}, maxZoom:18, scrollWheelZoom: false},
@@ -451,7 +524,10 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
                     focus: true,
                     draggable: false
                 }
-        };  
+        };      
+      
+      
+    });    
 ```
 **mapa.html**, sustituir:  
 ```html
