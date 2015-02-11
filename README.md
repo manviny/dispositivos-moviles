@@ -534,6 +534,25 @@ y en **mapa.html** cambiar la etiqueta leaflet para que quede de la siguiente fo
  <leaflet center="center" markers="marcadores" layers="layers" defaults="defaults"  event-broadcast="events"></leaflet>
  ```
 
+
+```javascript
+
+    app.controller('FirebaseCtrl', function($scope) {
+   
+        var miBD = new Firebase('https://toroembolao.firebaseio.com/');
+        
+        var name = 'Manol';
+        var text = 'Este testo va a la base de datos';
+        
+        miBD.set('User ' + name + ' says ' + text);
+        miBD.push({name: name, text: text});
+        
+        $scope.misDatos = $firebase(miBD).$asArray();
+
+    });  
+```
+
+
 ###Empaquetar la app para instalarla en un móvil
 ###[xml to json](http://davidwalsh.name/convert-xml-json)
 [listado apis](https://www.mashape.com/)   
